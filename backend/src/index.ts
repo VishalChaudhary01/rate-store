@@ -1,8 +1,10 @@
+import "module-alias/register";
 import express, { Request, Response } from "express";
+import { config } from "./config/env";
 
 const app = express();
 
-const PORT = process.env.PORT ?? 3000;
+const PORT = config.PORT;
 
 app.get("/health", (_req: Request, res: Response) => {
   res.status(200).json({ message: "Healthy server " });
