@@ -49,5 +49,4 @@ model Rating {
 enum Role {
   SYSTEM_ADMIN
   NORMAL_USER
-  STORE_OWNER
 }
