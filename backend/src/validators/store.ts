@@ -6,3 +6,11 @@ export const addStoreSchema = z.object({
   address: addressSchema,
   ownerId: idSchema,
 });
+
+export const addRatingSchema = z.object({
+  storeId: idSchema,
+  rating: z
+    .number("Rating is required")
+    .positive("Rating must be between 1 and 5")
+    .max(5, { message: "Rating must be between 1 and 5" }),
+});
