@@ -22,7 +22,7 @@ authRoutes.post("/sign-out", authRequire, signout);
 authRoutes.post(
   "/update-password",
   authRequire,
-  requireRole("NORMAL_USER", "STORE_OWNER"),
+  requireRole("NORMAL_USER"),
   validate(updatePasswordSchema),
   updatePassword
 );
